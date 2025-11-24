@@ -1,0 +1,62 @@
+/* variables.css */
+
+:root {
+  --color-gray: rgba(235, 235, 235, 0.856);
+  --color-gray-2: rgba(218, 217, 217, 0.856);
+  --color-gray-3: rgb(80, 78, 78);
+  --color-black: black;
+
+  --gradient :  linear-gradient(90deg, #d81b60, #f0f4f8, #0d47a1);
+
+
+   --color-fondo: #f8f9fa;
+  --color-card: #ffffffbb;
+  
+  --color-primary:  #1A237E;
+  --color-primary-2:  #23539c;
+
+  --color-secondary:  #E91E63;
+  --color-secondary-2:  #d82d6c;
+
+  --color-tertiary:  #00BCD4;
+  --color-tertiary-2:  #00ACC1;
+
+
+  /* --color-primary:  #5C6BC0;
+  --color-primary-2:  #3F51B5;
+
+
+  2c3e50
+  --color-secondary:  #F48FB1;
+  --color-secondary-2:  #E91E63;
+
+  --color-tertiary:  #E3F2FD;
+  --color-tertiary-2:  #BBDEFB;
+ */
+
+
+
+
+  /* --color-white:  rgba(255, 255, 255, 0.856);
+  --color-blue-2:  #0085E2;
+  --color-Pink:  #A93382;
+  --color-Pink-2:  #d188b9;
+  --color-fondo: #f8f9fa;
+  --color-card: #fff;
+  
+  */
+/* 1AAB8A */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 5px;
+  /* margin-top: 15px; */
+  padding: 5px;
+  /* padding-top: 10px; */
+  background-image: url("../img/Degradado.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}

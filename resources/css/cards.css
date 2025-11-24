@@ -1,0 +1,20 @@
+ 
+.card-content {
+  text-align: center;
+  padding-top: 50px; /* Espacio para la imagen */
+}
+
+.card_style {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-gray);
+      margin-top: 60px; /* Espacio para que la imagen sobresalga */
+  border-radius: 15px;
+  border-radius: 25px 2px  20px 2px;
+  padding: 10px;
+  margin-bottom: 20px;
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+padding: 15px 20px 15px 20px ;
+}
+
+
+ 

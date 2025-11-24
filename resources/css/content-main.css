@@ -1,0 +1,225 @@
+ 
+
+
+body {
+  margin: 10px;
+  /* padding: 10px; */
+}
+
+.layout {
+  margin-top: 0;
+  display: flex;
+}
+
+/* Sidebar fijo en escritorio */
+.sidebar {
+  margin-top: 30px;
+  padding: 10px;
+  width: 300px;
+  height: 100vh; /* toda la pantalla */
+  position: fixed; /* no se mueve */
+  top: 0;
+  left: 2;
+}
+
+/* Contenido en escritorio */
+.contenido {
+  flex: 1;
+  margin-left: 300px;
+  /* padding: 10px; */
+}
+
+.main-cont {
+  margin-top: 25px;
+}
+
+/* 📱 En móviles el sidebar pasa arriba y el contenido abajo */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column; /* columnas apiladas */
+  }
+
+  .sidebar {
+    position: relative; /* ya no fijo */
+    width: 100%; /* ocupa todo el ancho */
+    height: auto; /* se adapta al contenido */
+  }
+
+  .contenido {
+    margin-left: 0; /* sin espacio lateral */
+  }
+}
+
+.hr-chingon {
+  margin-top: 0px;
+  border: none; /* quitamos el borde por defecto */
+  height: 4px; /* altura del HR */
+  background: linear-gradient(
+    90deg,
+    var(--color-secondary),
+    #8f8e8e,
+    var(--color-primary)
+  ); /* gradiente de colores */
+  border-radius: 8px; /* esquinas redondeadas */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* sombra sutil */
+  position: relative;
+  overflow: hidden;
+}
+
+.hr-chingon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-20deg);
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Titulo principal */
+.title {
+  font-size: 1.35rem;
+  font-weight: 500;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: var(--color-primary) !important;
+}
+
+
+
+.title span {
+  font-size: 1.3rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+
+ 
+ 
+
+.sub-title {
+    font-size: 1.3rem;
+  position: relative;
+  color: var(--color-primary); 
+}
+
+/* Línea oculta con el pseudo-elemento ::after */
+.sub-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;   
+  left: 0;
+  height: 3px;  
+  width: 0; /* Inicialmente la línea no tiene ancho y no se ve */
+  background-color: var(--color-tertiary); /* El color de la línea, de tu paleta */
+  transition: width 0.3s ease-in-out; /* La animación del ancho */
+   left: 50%;
+  transform: translateX(-50%);
+}
+
+ .col-12.col-md-6.col-xl-4.mt-3:hover .sub-title::after {
+  width: 35%;
+  
+}
+
+
+/* Efecto de entrada */
+.modern-title h1 {
+  animation: fadeInDown 1.5s ease forwards;
+  opacity: 0;
+}
+
+.modern-title h1 {
+  color: var(--color-gray-3);
+  position: relative;
+  display: inline-block;
+  animation: fadeInDown 1.5s ease forwards;
+  opacity: 0;
+}
+
+.modern-title h1 .animation {
+  /* color: #16a085; */
+  color: var(--color-primary) !important;
+  position: relative;
+}
+
+.modern-title h1 .animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  /* background: linear-gradient(90deg, #16a085, #1abc9c); */
+  background: var(--gradient);
+  bottom: -9px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.modern-title h1 .animation:hover::after {
+  transform: scaleX(1);
+}
+
+@media screen and (min-width: 769px) and (max-width: 841px) {
+  .border-end > svg {
+    display: none;
+  }
+
+  .iconos_redes > a > svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 575.98px) {
+  .profile-image-container {
+    top: -80px;
+  }
+
+  .phrase {
+    font-size: 1.1rem;
+  }
+
+  .email {
+    font-size: 1rem;
+  }
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .icon {
+    width: 40px !important;
+    height: 40px;
+  }
+  .sm-text-justify {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: justify;
+  }
+
+  .title{
+     font-size: 1.8rem;
+  }
+
+  .title span {
+  font-size: 1.5rem;
+  color: var(--color-tertiary);
+  font-weight: 600;
+}
+}

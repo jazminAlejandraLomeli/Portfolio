@@ -1,0 +1,48 @@
+ 
+.button-primay,
+.button-secondary {
+  border: none;
+  position: relative;
+  height: 35px;
+  font-size: 1em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  border-radius: 2px;
+}
+
+.button-primay {
+  background: var(--color-secondary-2);
+  color: var(--color-card);
+}
+
+.button-primay:hover {
+  background: var(--color-card);
+  color: var(--color-secondary-2);
+}
+
+.button-primay:before,
+.button-primay:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+   background: var(--color-tertiary);
+  transition: 400ms ease all;
+}
+
+.button-primay:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.button-primay:hover:before,
+.button-primay:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}

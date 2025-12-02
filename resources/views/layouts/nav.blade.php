@@ -2,7 +2,7 @@
      <ul class="mx-2 list-unstyled d-flex justify-content-around align-items-between gap-1 mb-0" data-aos="fade-left">
          <li class="menu" data-aos="zoom-in" data-aos-delay="100">
 
-             <a href="/Portafolio"
+             <a href="{{ route('home') }}"
                  class="text-decoration-none d-flex flex-column align-items-center {{ $currentPage == 'Home' ? 'active' : '' }}">
                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -16,7 +16,7 @@
 
          </li>
          <li class="menu">
-             <a href="/Portafolio/About"
+             <a href="{{ route('about') }}"
                  class="text-decoration-none d-flex flex-column align-items-center {{ $currentPage == 'About' ? 'active' : '' }}">
 
                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48">
@@ -40,17 +40,8 @@
                  </svg>
                  <span>Habilidades</span></a>
          </li>
-         <!-- <li class="menu">
-
-             <a href="/Portafolio/Experience" class="text-decoration-none d-flex flex-column align-items-center{{ $currentPage == 'Experience' ? 'active' : '' }}">
-
-                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 1024 1024">
-                     <path fill="currentColor" d="m917 211.1l-199.2 24c-6.6.8-9.4 8.9-4.7 13.6l59.3 59.3l-226 226l-101.8-101.7c-6.3-6.3-16.4-6.2-22.6 0L100.3 754.1a8.03 8.03 0 0 0 0 11.3l45 45.2c3.1 3.1 8.2 3.1 11.3 0L433.3 534L535 635.7c6.3 6.2 16.4 6.2 22.6 0L829 364.5l59.3 59.3a8.01 8.01 0 0 0 13.6-4.7l24-199.2c.7-5.1-3.7-9.5-8.9-8.8" />
-                 </svg>
-                 <span>Experiencia</span></a>
-         </li> -->
          <li class="menu">
-             <a href="/Portafolio/Experience"
+             <a href="{{ route('experience') }}"
                  class="text-decoration-none d-flex flex-column align-items-center{{ $currentPage == 'Experience' ? 'active' : '' }}">
 
                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
@@ -70,7 +61,5 @@
                  </svg>
                  <span>Cursos</span></a>
          </li>
-
-
      </ul>
  </div>

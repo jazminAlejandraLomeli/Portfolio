@@ -18,12 +18,10 @@
             @include('layouts.aside')
 
         </aside>
-
-        {{-- Aquí va tu aside si quieres que esté en todas las páginas --}}
-
+        {{-- Contenedor Principal --}}
         <main class="container contenido">
             @include('layouts.nav')
-
+            
             @yield('content')
         </main>
     </div>

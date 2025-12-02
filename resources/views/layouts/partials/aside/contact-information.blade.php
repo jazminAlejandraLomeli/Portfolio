@@ -1,8 +1,9 @@
  <ul class="list-unstyled d-flex row mx-1">
 
 
-     <x-icon-contact-component>
-         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18.15625" viewBox="0 0 256 258">
+   
+      <x-icon-contact-component type="phone" id='phone'>
+         <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18.15625" viewBox="0 0 256 258">
              <defs>
                  <linearGradient id="IconifyId19903727e4a684aeb14" x1="50%" x2="50%" y1="100%"
                      y2="0%">
@@ -22,11 +23,9 @@
              <path fill="#FFF"
                  d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64" />
          </svg>
-         <span class="ps-1 fw-semibold">
-             <span class="text-primary">+52</span> &ensp;3781220818
-         </span>
+        
      </x-icon-contact-component>
-
+ 
 
      <li class="d-flex justify-content-center justify-content-md-start align-items-center mt-3 ">
          <div class="pe-2 border-end">
@@ -47,8 +46,9 @@
              alejandrazermeno18@gmail.com
          </span>
      </li>
-     <x-icon-contact-component>
-         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="28.671875" viewBox="0 0 256 367">
+
+     <x-icon-contact-component type="address" >
+         <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="28.671875" viewBox="0 0 256 367">
              <path fill="#34A853"
                  d="M70.585 271.865a371 371 0 0 1 28.911 42.642c7.374 13.982 10.448 23.463 15.837 40.31c3.305 9.308 6.292 12.086 12.714 12.086c6.998 0 10.173-4.726 12.626-12.035c5.094-15.91 9.091-28.052 15.397-39.525c12.374-22.15 27.75-41.833 42.858-60.75c4.09-5.354 30.534-36.545 42.439-61.156c0 0 14.632-27.035 14.632-64.792c0-35.318-14.43-59.813-14.43-59.813l-41.545 11.126l-25.23 66.451l-6.242 9.163l-1.248 1.66l-1.66 2.078l-2.914 3.319l-4.164 4.163l-22.467 18.304l-56.17 32.432z" />
              <path fill="#FBBC04"
@@ -60,10 +60,6 @@
              <path fill="#EA4335"
                  d="M12.612 188.892S0 164.194 0 128.414c0-33.817 13.146-63.377 30.015-82.649l60.318 50.759z" />
          </svg>
-         <span class="ps-1">
-             <a class="maps" href="https://maps.app.goo.gl/vS2L648s2kqXB1zB6" target="_blank" tabindex="0">
-                 <span class="cont-texto">Tepatitlán de Morelos</span>
-             </a>
-         </span>
+        
      </x-icon-contact-component>
  </ul>

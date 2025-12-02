@@ -1,17 +1,13 @@
 @extends('layouts.app')
 <title>Home</title>
-@section('content')
-    <div class="card_style  main-cont  position-relative">
 
-        <div class=" p-0 m-0">
-            <div class="modern-title mb-0 mt-2 px-0 ps-1 text-start">
-                <h1 class="fw-bolder title m-0"> Resume</h1>
-            </div>
-            <hr class="hr-chingon w-50 border">
-        </div>
+@section('content')
+    <div class="card_style main-cont position-relative">
+
+        <x-title-component title="Resume" />
 
         <div class="col-12 mx-2">
-
+            
             <p class="sm-text-justify">
                 <b class="fs-2">Hola!!</b> 👋
                 <br>
@@ -20,16 +16,10 @@
                 Soy una persona activa, disfruto del pensamiento crítico para resolver problemas y me divierto mientras lo
                 hago.
                 Me apasiona transformar ideas en soluciones digitales que funcionen y sorprendan.
-
                 <br>
-
                 Estoy emocionada por las oportunidades que el mundo de la tecnología me ofrece y comprometida a seguir
                 creciendo y desarrollándome como profesional en esta apasionante industria.
             </p>
-
-
-
-
 
             <br>
 

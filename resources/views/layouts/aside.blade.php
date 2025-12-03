@@ -5,15 +5,16 @@
 
      <!-- Contenido del card con padding-top para dar espacio a la imagen -->
      <div class="card-content">
-         <h3 class="mt-4 fw-semibold title"> <span>
-                 < </span>Jazmin A. Lomelí <span> / > </span></h4>
+         <h1 class="mt-4 fw-semibold title">
+             <span>
+                 < </span>Jazmin A. Lomelí <span> / > </span>
+        </h1>
                      <p class="text-muted">Jr Full-Stack Web Developer</p>
+                     <x-title-animation text="Transformando sueños en " animationText="sitios web" />
                      <!-- <p class="phrase"> <i> "Transformando sueños en sitios web "</i></p> -->
      </div>
 
-     <div class="modern-title mx-2 my-0 text-center mb-3">
-         <h1 class="phrase fw-normal">Transformando sueños en <span class="fw-bold animation">sitios web</span></h1>
-     </div>
+    
 
      <!-- Descargar cv  -->
      <div class="d-flex justify-content-center align-items-center p-0 mb-3">

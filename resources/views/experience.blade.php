@@ -8,7 +8,7 @@
 
         <div>
 
-            <x-title-component title="Desarrollo web" />
+            <x-title title="Desarrollo web" />
 
 
             <div class="col-12">
@@ -30,11 +30,11 @@
 
 
             <div class=" pt-3">
-                <x-title-component title="Proyectos" />
+                <x-title title="Proyectos" />
 
             </div>
 
-           <x-carrousel-projects-component />
+           <x-carrousel-projects />
 
         </div>
 

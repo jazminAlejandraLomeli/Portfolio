@@ -16,3 +16,9 @@ Route::get('/experience', function () {
     $currentPage  = 'Experience';
     return view('experience', compact('currentPage'));
 })->name('experience');
+
+
+Route::get('/skills', function () {
+    $currentPage  = 'Skills';
+    return view('skills', compact('currentPage'));
+})->name('skills');

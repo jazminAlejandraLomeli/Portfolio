@@ -54,3 +54,11 @@
     margin-top: 0px;
     text-align: center !important;
 }
+
+.links-projects a:hover {
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+
+}
+
+

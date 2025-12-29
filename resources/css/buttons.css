@@ -1,6 +1,5 @@
  
-.button-primay,
-.button-secondary {
+.button-primary {
   border: none;
   position: relative;
   height: 35px;
@@ -12,18 +11,56 @@
   border-radius: 2px;
 }
 
-.button-primay {
+ 
+.button-secondary {
+  border: none;
+  position: relative;
+  height: 30px;
+  font-size: 0.9em;
+  padding: 0 0.8em;
+  cursor: pointer;
+  transition: 900ms ease all;
+  outline: none;
+  border-radius: 2px;
+}
+
+
+
+
+.button-primary {
   background: var(--color-secondary-2);
   color: var(--color-card);
 }
+.button-secondary {
+  background: var(--color-tertiary-3);
+  color: var(--color-black);
+}
 
-.button-primay:hover {
+.button-secondary:hover {
+  background: var(--color-primary-2);
+  color: var(--color-fondo);
+}
+.button-secondary:before,
+.button-secondary:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+   /* background: var(--color-tertiary); */
+  transition: 400ms ease all;
+}
+
+
+
+.button-primary:hover {
   background: var(--color-card);
   color: var(--color-secondary-2);
 }
 
-.button-primay:before,
-.button-primay:after {
+.button-primary:before,
+.button-primary:after {
   content: "";
   position: absolute;
   top: 0;
@@ -34,15 +71,15 @@
   transition: 400ms ease all;
 }
 
-.button-primay:after {
+.button-primary:after {
   right: inherit;
   top: inherit;
   left: 0;
   bottom: 0;
 }
 
-.button-primay:hover:before,
-.button-primay:hover:after {
+.button-primary:hover:before,
+.button-primary:hover:after {
   width: 100%;
   transition: 800ms ease all;
 }

@@ -4,7 +4,7 @@
 ])
 
 
-<li class="d-flex justify-content-center justify-content-md-start align-items-center mt-3 "
+<li class="d-flex justify-content-center justify-content-md-start align-items-center mt-2"
 @if($id) id="{{ $id }}" @endif>
     <div class="pe-2">
         {{-- Aquí va el SVG u otro icono --}}

@@ -1,4 +1,4 @@
- <ul class="list-unstyled d-flex row mx-1">
+ <ul class="list-unstyled d-flex row mx-1 pt-0 mt-0 ">
 
      <div class="d-flex flex-wrap justify-content-center">
 
@@ -28,17 +28,15 @@
      </div>
 
 
-     <button class="mt-3 see-more text-center" data-bs-toggle="collapse" href="#more-info" role="button">
-         Ver mas
+     <button class="mt-2 see-more text-center" data-bs-toggle="collapse" href="#more-info" role="button">
+        Más información
      </button>
 
-
-
-     <div class="collapse  " id="more-info">
+     <div class="collapse mt-0 mb-0 pb-0" id="more-info">
          <div class="card card-body">
              <div class="d-flex flex-wrap justify-content-center">
 
-                 <li class="d-flex justify-content-center justify-content-md-start align-items-center mt-2">
+                 <li class="d-flex justify-content-center justify-content-md-start align-items-center mt-1">
                      <div class="pe-2 border-end">
                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13.5703125"
                              viewBox="0 0 256 193">

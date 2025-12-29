@@ -4,30 +4,44 @@
 @section('content')
     <div class="card_style main-cont position-relative">
 
-        <x-title title="Resume" />
+        <x-title title="Desarrolladora Web Full Stack Jr" />
 
         <div class="col-12 ">
-            
-            <p class="sm-text-justify">
-                
-             <x-title-animation  animationText="¡Hola!" size="fs-3" />
 
-                Soy <i class="fw-bold"> Jazmin Lomelí</i>, una desarrolladora web apasionada por la tecnología y el diseño.
-              
+            <p class="sm-text-justify">
+
+                {{-- <x-title-animation animationText="" size="fs-3" /> --}}
+
+                <br>
+                Creo sitios web funcionales, atractivos y enfocados en el usuario.
+
                 <br>
                 <br>
-                Me encanta crear páginas web y aprender cosas nuevas.
-                Soy una persona activa, disfruto del pensamiento crítico para resolver problemas y me divierto mientras lo
-                hago.
-                Me apasiona transformar ideas en soluciones digitales que funcionen y sorprendan.
+
+                {{-- Soy <i class="fw-bold"> Jazmin Lomelí</i>, una desarrolladora web apasionada por la tecnología y el diseño. --}}
+
+                Hola, soy <i class="fw-bold"> Jazmin A. Lomeli </i>, desarrolladora web apasionada por la tecnología y el
+                diseño. Disfruto convertir
+                ideas en soluciones digitales eficientes, cuidando tanto la funcionalidad como la experiencia del usuario
+
                 <br>
-                Estoy emocionada por las oportunidades que el mundo de la tecnología me ofrece y comprometida a seguir
-                creciendo y desarrollándome como profesional en esta apasionante industria.
+                <br>
+
+
+                Me especializo en el desarrollo de aplicaciones web modernas, combinando lógica, diseño y buenas prácticas
+                de programación. Me considero una persona proactiva, con pensamiento crítico y en constante aprendizaje.
+
+                <br>
+                <br>
+
+                Me motiva enfrentar nuevos retos, resolver problemas reales y seguir creciendo profesionalmente dentro del
+                mundo del desarrollo web.
+
             </p>
 
             <br>
 
-        </div> 
+        </div>
 
 
 

@@ -26,12 +26,11 @@ body {
 .contenido {
   flex: 1;
   margin-left: 300px;
-  /* padding: 10px; */
-}
+ } 
 
-.main-cont {
-  margin-top: 25px;
-}
+/* .main-cont {
+  margin-top: 250px;
+} */
 
 /* 📱 En móviles el sidebar pasa arriba y el contenido abajo */
 @media (max-width: 768px) {

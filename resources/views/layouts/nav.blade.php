@@ -1,6 +1,6 @@
  <div class="navigation m-2 m-sm-0 px-3">
      <ul class="mx-2 list-unstyled d-flex justify-content-around align-items-between gap-1 mb-0" data-aos="fade-left">
-         <li class="menu" data-aos="zoom-in" data-aos-delay="100">
+         <li class="menu" data-aos="zoom-in">
 
              <a href="{{ route('home') }}"
                  class="text-decoration-none d-flex flex-column align-items-center {{ $currentPage == 'Home' ? 'active' : '' }}">
@@ -33,8 +33,7 @@
              </a>
          </li>
          <li class="menu">
-             <a href="{{route('skills')}}" 
-             
+             <a href="{{ route('skills') }}"
                  class="text-decoration-none d-flex flex-column align-items-center {{ $currentPage == 'Skills' ? 'active' : '' }}">
 
 
@@ -46,7 +45,7 @@
          </li>
          <li class="menu">
              <a href="{{ route('experience') }}"
-                 class="text-decoration-none d-flex flex-column align-items-center{{ $currentPage == 'Experience' ? 'active' : '' }}">
+                 class="text-decoration-none d-flex flex-column align-items-center {{ $currentPage == 'Experience' ? 'active' : '' }}">
 
                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                      <path fill="none" stroke="currentColor" stroke-width="1.5"

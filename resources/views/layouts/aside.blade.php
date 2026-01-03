@@ -1,4 +1,4 @@
- <div class="card_style p-0 position-relative pb-0">
+ <div class=" p-0 position-relative pb-0 aside-card">
 
      <!-- Incluir la imagen del perfil -->
      @include('layouts.partials.aside.image')

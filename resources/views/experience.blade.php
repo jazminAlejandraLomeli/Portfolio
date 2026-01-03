@@ -1,11 +1,11 @@
 @extends('layouts.app')
-<title>About</title>
+<title>Experience</title>
 @vite(['resources/css/carrousel.css'])
 
 @section('content')
     <!-- Contenido de la vista -->
     <div class="card_style main-cont position-relative">
-
+ {{ $currentPage }}
         <div>
 
             <x-title title="Desarrollo web" />

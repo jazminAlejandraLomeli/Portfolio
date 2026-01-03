@@ -1,32 +1,39 @@
 .rounded-icon {
-        border-radius: 50%;
-        padding: 10px;
+    border-radius: 50%;
+    padding: 10px;
+}
 
-    }
+.rounded-icon:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
 
-    .rounded-icon:hover {
-        transform: scale(1.1);
-        transition: all 0.3s ease-in-out;
-    }
+.frontend-icon {
+    background: #3a997b3d;
+}
+.backend-icon {
+    background: #15a9bd31;
+    /* background: #09abc0; */
+}
+.database-icon {
+    background: #f48fb179;
+}
+.tools-icon {
+    background: #58a1aa6e;
+}
 
-    .frontend-icon {
-        background: #3a997b42;
+.skill-icon {
+    width: 22px;
+    height: 22px;
+}
 
-    }
-    .backend-icon {
-        background: #5c739762;
+.title-2 {
+    font-size: 1.2rem;
+    color: var(--color-primary) !important;
+    font-weight: 600;
+}
 
-    }
-    .database-icon {
-        background: #f48fb179;
-
-    }
-      .tools-icon {
-        background: #58a1aa6e;
-
-    }
-
-    .skill-icon {
-        width: 22px;
-        height: 22px;
-    }
+.rounded-icon-2 {
+    border-radius: 50%;
+    padding: 8px;
+}

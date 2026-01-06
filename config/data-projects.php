@@ -36,11 +36,21 @@ return [
                 ],
             ],
             'features' => [
-                ['name' => 'Desarrollo backend con Laravel y frontend con Blade y Bootstrap'],
-                ['name' => 'Diseño y gestión de base de datos'],
-                ['name' => 'Interfaces responsivas'],
-                ['name' => 'Diseño UX/UI'],
-                ['name' => 'Mantenimiento y actualizaciones'],
+                'short' => [ 
+                    ['name' => 'Desarrollo backend con Laravel y frontend con Blade y Bootstrap'],
+                    ['name' => 'Diseño y gestión de base de datos'],
+                    ['name' => 'Interfaces responsivas'],
+                    ['name' => 'Diseño UX/UI'],
+                    ['name' => 'Mantenimiento y actualizaciones'],
+                ],
+                'short' => [
+                'Desarrollo backend con Laravel siguiendo arquitectura MVC',
+                'Implementación de frontend con Blade y Bootstrap',
+                'Diseño y normalización de base de datos MySQL',
+                'Interfaces responsivas enfocadas en experiencia de usuario',
+                'Diseño UX/UI orientado a usuarios administrativos',
+                'Mantenimiento, mejoras y corrección de bugs',
+                ],
             ],
 
         ],

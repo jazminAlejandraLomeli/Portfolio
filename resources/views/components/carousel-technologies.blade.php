@@ -15,7 +15,7 @@
 
  {{-- <div class="collapse" id="collapse_{{ $id }}"> --}}
      {{-- <div class="card card-body"> --}}
-         <div class="d-flex flex-wrap gap-2 mt-2 mb-3">
+         <div class="d-flex flex-row gap-2 mt-2 mb-3">
              {{-- Iterar los colores y las tecnologías --}}
              @foreach ($list as $tech)
                  <span class="badge text-bg-{{ $tech['color'] }}">

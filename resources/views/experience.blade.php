@@ -48,7 +48,9 @@
     </div>
 @endsection
 
-<script>
+
+@vite(['resources/js/experience/index.js'])
+<!-- <script>
     document.addEventListener('DOMConteentLoaded', () => {
         document.querySelectorAll('.read-more-btn').length
         document.querySelectorAll('.read-more-btn').forEach(btn => {
@@ -65,4 +67,4 @@
             });
         });
     });
-</script>
+</script> -->

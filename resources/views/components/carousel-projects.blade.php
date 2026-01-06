@@ -22,12 +22,14 @@
 
                 {{-- Iterar Tecnologías --}}
                 <x-carousel-technologies id="{{ $project['id'] }}" :list="$project['technologies']" />
-
+             
+                <!-- Rol en el proyecto -->
+                <x-carousel-role :role="$project['role'] ?? null" :features="$project['features'] ?? []" :id="$project['id']" />
+                
                 {{-- Descripción con leer más --}}
                 <x-carousel-description id_name="{{ $project['id'] }}" text="{{ $project['description'] }}" />
 
-                <x-carousel-role :role="$project['role'] ?? null" :features="$project['features'] ?? []" :id="$project['id']" />
-
+                {{-- Links del proyecto --}} 
                 <div class="border d-flex justify-content-end links-projects">
                     {{-- Enlace a la página del proyecto --}}
                     <a href="{{ $project['gitHub'] }}" class="btn p-0 text-decoration-none m-2 " target="_blank"
@@ -79,28 +81,4 @@
     </div>
 @endforeach
 
-
-<script>
-    document.querySelectorAll('.read-more-btn').forEach(btn => {
-        const targetId = btn.getAttribute('data-target');
-        const desc = document.getElementById(targetId);
-
-        // ⭐ Detectar si el texto es más largo que el límite (3 líneas)
-        const lineHeight = parseInt(window.getComputedStyle(desc).lineHeight);
-        const maxHeight = lineHeight * 3;
-
-        if (desc.scrollHeight <= maxHeight + 2) {
-            // Texto corto → ocultar botón
-            btn.style.display = 'none';
-        }
-
-        // Evento de leer más / leer menos
-        btn.addEventListener('click', () => {
-            desc.classList.toggle('expanded');
-
-            btn.innerText = desc.classList.contains('expanded') ?
-                'Leer menos' :
-                'Leer más';
-        });
-    });
-</script>
+ 

@@ -1,0 +1,66 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-BW-fqX7-.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/css/aside.css": {
+    "file": "assets/aside-Ds9cTNzQ.css",
+    "src": "resources/css/aside.css",
+    "isEntry": true,
+    "name": "aside",
+    "names": [
+      "aside.css"
+    ]
+  },
+  "resources/css/carrousel.css": {
+    "file": "assets/carrousel-DDLD3Imo.css",
+    "src": "resources/css/carrousel.css",
+    "isEntry": true,
+    "name": "carrousel",
+    "names": [
+      "carrousel.css"
+    ]
+  },
+  "resources/css/notavailable.css": {
+    "file": "assets/notavailable-GjQ5t_6T.css",
+    "src": "resources/css/notavailable.css",
+    "isEntry": true,
+    "name": "notavailable",
+    "names": [
+      "notavailable.css"
+    ]
+  },
+  "resources/css/skills.css": {
+    "file": "assets/skills-BkL5vGdy.css",
+    "src": "resources/css/skills.css",
+    "isEntry": true,
+    "name": "skills",
+    "names": [
+      "skills.css"
+    ]
+  },
+  "resources/img/Degradado.avif": {
+    "file": "assets/Degradado-tYIF_KSi.avif",
+    "src": "resources/img/Degradado.avif"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-DH0Rmj52.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-DbdFVdDt.css"
+    ]
+  },
+  "resources/js/experience/index.js": {
+    "file": "assets/index-erYywSEa.js",
+    "name": "index",
+    "src": "resources/js/experience/index.js",
+    "isEntry": true
+  }
+}

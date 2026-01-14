@@ -1,0 +1,1 @@
+document.querySelectorAll(".read-more-btn").forEach(e=>{const n=e.getAttribute("data-target"),t=document.getElementById(n),s=parseInt(window.getComputedStyle(t).lineHeight)*3;t.scrollHeight<=s+2&&(e.style.display="none"),e.addEventListener("click",()=>{t.classList.toggle("expanded"),e.innerText=t.classList.contains("expanded")?"Leer menos":"Leer más"})});

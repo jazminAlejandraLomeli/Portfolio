@@ -1,6 +1,6 @@
  <div class="navigation m-2 m-sm-0 px-3">
-     <ul class="mx-2 list-unstyled d-flex justify-content-around align-items-between gap-1 mb-0" data-aos="fade-left">
-         <li class="menu" data-aos="zoom-in">
+     <ul class="mx-2 list-unstyled d-flex justify-content-around align-items-between gap-1 mb-0" data-aos="zoom-in">
+         <li class="menu">
 
              <a href="{{ route('home') }}"
                  class="text-decoration-none d-flex flex-column align-items-center {{ $currentPage == 'Home' ? 'active' : '' }}">
@@ -54,8 +54,8 @@
                  <span>Experiencia</span></a>
          </li>
          <li class="menu">
-             <a href="/Portafolio/Cursos"
-                 class="text-decoration-none d-flex flex-column align-items-center{{ $currentPage == 'Cursos' ? 'active' : '' }}">
+             <a href="{{ route('courses') }}"
+                 class="text-decoration-none d-flex flex-column align-items-center {{ $currentPage == 'Courses' ? 'active' : '' }}">
 
                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                      <path fill="currentColor" fill-rule="evenodd"

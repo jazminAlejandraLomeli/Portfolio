@@ -14,19 +14,20 @@
          <!-- <p class="phrase"> <i> "Transformando sueños en sitios web "</i></p> -->
      </div>
 
-
-
      <!-- Descargar cv  -->
-     <div class="d-flex justify-content-center align-items-center p-0 mb-3">
-         <button class="button-primary">Descargar CV</button>
+     <div class="d-flex justify-content-center align-items-center p-0 mb-3 icon-tooltip" rel="noopener noreferrer"
+         data-tooltip="Ver mi CV">
+         <a href="{{ asset('docs/JAZMIN_lOMELI_ZERMENO_CV.pdf') }}" class="button-primary text-decoration-none pt-1"
+             target="_blank" rel="noopener noreferrer">
+             Descargar CV
+         </a>
      </div>
 
      <hr class="hr-chingon">
 
-     {{-- <p class="text-center mt-2 mb-0 fs-italic"> Redes sociales </p> --}}
      {{-- Redes sociales  --}}
      @include('layouts.partials.aside.social-media')
-
+     {{-- Información de contacto F --}}
      @include('layouts.partials.aside.contact-information')
 
  </div>

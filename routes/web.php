@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ExperienceController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,7 +19,17 @@ Route::get('/experience', function () {
 })->name('experience');
 
 
+
+Route::get('/experience/{keyword}', [ExperienceController::class, 'show'])
+    ->name('experience.projects');
+
+
 Route::get('/skills', function () {
     $currentPage  = 'Skills';
     return view('skills', compact('currentPage'));
 })->name('skills');
+
+Route::get('/courses', function () {
+    $currentPage  = 'Courses';
+    return view('courses', compact('currentPage'));
+})->name('courses');

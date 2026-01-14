@@ -1,22 +1,61 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
-
 @import "animate.css/animate.min.css";
+@import "./root.css";
+@import "./content-main.css";
+@import "./nav.css";
+@import "./buttons.css";
+@import "./cards.css";
 
-@import url("./root.css");
-@import url("./content-main.css");
-@import url("nav.css");
-@import url("buttons.css");
-@import url("cards.css");
+.icon-tooltip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
 
-.tooltip-success .tooltip-inner {
-    background-color: #28a745;
+/*  
+.icon-tooltip::after {
+    position: fixed;
+    z-index: 9999;
+} */
+
+
+.icon-tooltip::after {
+    content: attr(data-tooltip);
+    position: fixed;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: gray;
     color: #fff;
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 1000 !important;
 }
 
-.tooltip-success .tooltip-arrow::before,
-.tooltip-success .tooltip-arrow::after {
-    border-top-color: #ad1717 !important;
+.icon-tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #212529;
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
+
+.icon-tooltip:hover::after,
+.icon-tooltip:hover::before {
+    opacity: 1;
+}
+
+
+
 
 h1 {
     font-family: poppins, sans-serif;

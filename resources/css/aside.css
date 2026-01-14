@@ -101,6 +101,14 @@ a.maps {
     background-color: transparent;
     border: none !important;
 }
+/* Estilos para el enlace de WhatsApp */
+.whatsapp-link {
+    cursor: pointer;
+}
+
+.whatsapp-link:hover span {
+    text-decoration: underline;
+}
 
  
 

@@ -29,7 +29,7 @@
 
 
      <button class="mt-2 see-more text-center" data-bs-toggle="collapse" href="#more-info" role="button">
-        Más información
+         Más información
      </button>
 
      <div class="collapse mt-0 mb-0 pb-0" id="more-info">
@@ -78,7 +78,5 @@
              </div>
          </div>
      </div>
-
-
 
  </ul>

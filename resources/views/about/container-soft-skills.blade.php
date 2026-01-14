@@ -43,9 +43,6 @@
                      </g>
                  </svg>
              </x-list-soft-skills>
-
-
-
          </ul>
      </div>
      <div class="col-12col-md-6 col-xl-6 gap-3">

@@ -6,7 +6,7 @@
 
 
  <div class="text-justify px-1 mb-2 description" id="desc-{{ $id_name }}">
-     <span class="fw-italic text-muted mb-2">Descripción </span>
+     <span class="fw-bold mb-2">Descripción </span>
 
      <p class="card-text desc-text " id="text-{{ $id_name }}">
          {{ $text }}

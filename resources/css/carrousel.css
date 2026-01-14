@@ -1,7 +1,18 @@
+ 
+.card-wrapper {
+    position: relative;
+    overflow: visible;
+}
+
+.card-inner {
+    background-color: #fff;
+}
+
 .card-shadow {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     max-width: 23rem;
- }
+    
+  }
 
 .img-shadow {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 8px 5px -5px,
@@ -61,4 +72,39 @@
 
 }
 
+.bg-laravel {
+    background-color: #f0513f !important;
+}
 
+.bg-Jquery {
+    background-color: #4f46e5 !important;
+}
+
+.bg-bootstrap {
+    background-color: #752FF7 !important;
+}
+
+.bg-js {
+    background-color: #eab308 !important;
+    color: black !important;
+}
+.bg-php {
+    background-color: #787CB5 !important;
+}
+.bg-Tailwind {
+    background-color: #38BDF8 !important;
+    color: black !important;
+}
+.bg-mysql {
+    background-color: #00758F !important;
+    color: white !important;
+}
+
+.bg-css {
+    background-color: #0277BD !important;
+    color: white !important;
+}
+.bg-axios{
+    background-color: #5728DC !important;
+    color: white !important;
+}

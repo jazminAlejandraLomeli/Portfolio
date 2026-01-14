@@ -8,7 +8,7 @@
 
         <div class="col-12 ">
 
-            <p class="sm-text-justify">
+            <p class="text-justify">
 
                 {{-- <x-title-animation animationText="" size="fs-3" /> --}}
 

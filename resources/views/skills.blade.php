@@ -1,12 +1,7 @@
-@extends('layouts.app')
-<title>Skills</title>
-@vite(['resources/css/carrousel.css', 'resources/css/skills.css'])
 
 
-
-
-
-@section('content')
+<x-layouts.app>
+    @vite(['resources/css/carrousel.css', 'resources/css/skills.css'])
     <!-- Contenido de la vista -->
     <div class="card_style position-relative">
 
@@ -30,17 +25,17 @@
                         <div class="mt-2 row d-flex container_skill p-3 border border-2 rounded-3 shadow-sm">
 
                             @foreach (config('data-skills.concepts') as $concept)
-                                <!-- Texto superior -->
-                                <div class="col-12 col-md-6 col-xl-4 d-flex align-items-center gap-3 mb-2">
-                                    <span class="fw-normal">
-                                        <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="10" height="10"
-                                            viewBox="0 0 24 24">
-                                            <path fill="#025f2a"
-                                                d="M8 5.072a8 8 0 1 1-3.995 7.213L4 12l.005-.285A8 8 0 0 1 8 5.072" />
-                                        </svg>
+                            <!-- Texto superior -->
+                            <div class="col-12 col-md-6 col-xl-4 d-flex align-items-center gap-3 mb-2">
+                                <span class="fw-normal">
+                                    <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                        viewBox="0 0 24 24">
+                                        <path fill="#025f2a"
+                                            d="M8 5.072a8 8 0 1 1-3.995 7.213L4 12l.005-.285A8 8 0 0 1 8 5.072" />
+                                    </svg>
 
-                                        {{ $concept['name'] }}</span>
-                                </div>
+                                    {{ $concept['name'] }}</span>
+                            </div>
                             @endforeach
 
                         </div>
@@ -53,4 +48,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-layouts.app>

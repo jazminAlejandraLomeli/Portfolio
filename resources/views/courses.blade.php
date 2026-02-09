@@ -1,10 +1,7 @@
-@extends('layouts.app')
-<title>Cursos</title>
+<x-layouts.app>
 
-{{-- Quitar cuando este disponible --}}
-@vite(['resources/css/notavailable.css'])
+    @vite(['resources/css/notavailable.css'])
 
-@section('content')
     <!-- Contenido de la vista -->
     <div class="card_style main-cont position-relative">
 
@@ -31,6 +28,6 @@
             </div>
         </div>
     </div>
-@endsection
 
-@vite(['resources/js/experience/index.js'])
+    @vite(['resources/js/experience/index.js'])
+</x-layouts.app>

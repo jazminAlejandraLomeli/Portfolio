@@ -1,8 +1,7 @@
-@extends('layouts.app')
-<title>Experience</title>
-@vite(['resources/css/carrousel.css'])
 
-@section('content')
+<x-layouts.app>
+
+    @vite(['resources/css/carrousel.css'])
     <!-- Contenido de la vista -->
     <div class="card_style main-cont position-relative">
 
@@ -13,8 +12,8 @@
             <div class="col-12">
 
                 <p class="text-justify">
-                  
-                    Cuento con más de 2 años de experiencia como <b> Full  Stack Developer </b>, participando en el ciclo
+
+                    Cuento con más de 2 años de experiencia como <b> Full Stack Developer </b>, participando en el ciclo
                     completo de
                     vida del software: desde el levantamiento de requerimientos y diseño de arquitectura, hasta el
                     desarrollo front-end y back-end, pruebas, despliegue y mantenimiento.
@@ -39,6 +38,6 @@
         </div>
 
     </div>
-@endsection
 
-@vite(['resources/js/experience/index.js'])
+    @vite(['resources/js/experience/index.js'])
+</x-layouts.app>

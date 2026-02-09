@@ -1,9 +1,11 @@
- <div class="navigation m-2 m-sm-0 px-3">
+ 
+ <br> 
+<div class="navigation m-2 m-sm-0 px-3">
      <ul class="mx-2 list-unstyled d-flex justify-content-around align-items-between gap-1 mb-0" data-aos="zoom-in">
          <li class="menu">
 
-             <a href="{{ route('home') }}"
-                 class="text-decoration-none d-flex flex-column align-items-center {{ $currentPage == 'Home' ? 'active' : '' }}">
+             <a wire:navigate.hover href="{{ route('home') }}"
+                 class="text-decoration-none d-flex flex-column align-items-center {{ Route::is('home') ? 'active' : '' }}">
                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                          stroke-width="2">
@@ -16,8 +18,8 @@
 
          </li>
          <li class="menu">
-             <a href="{{ route('about') }}"
-                 class="text-decoration-none d-flex flex-column align-items-center {{ $currentPage == 'About' ? 'active' : '' }}">
+             <a wire:navigate.hover href="{{ route('about') }}"
+                 class="text-decoration-none d-flex flex-column align-items-center {{ Route::is('about') ? 'active' : '' }}">
 
                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48">
                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -33,8 +35,8 @@
              </a>
          </li>
          <li class="menu">
-             <a href="{{ route('skills') }}"
-                 class="text-decoration-none d-flex flex-column align-items-center {{ $currentPage == 'Skills' ? 'active' : '' }}">
+             <a wire:navigate.hover href="{{ route('skills') }}"
+                 class="text-decoration-none d-flex flex-column align-items-center {{ Route::is('skills') ? 'active' : '' }}">
 
 
                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
@@ -44,8 +46,8 @@
                  <span>Habilidades</span></a>
          </li>
          <li class="menu">
-             <a href="{{ route('experience') }}"
-                 class="text-decoration-none d-flex flex-column align-items-center {{ $currentPage == 'Experience' ? 'active' : '' }}">
+             <a wire:navigate.hover href="{{ route('experience') }}"
+                 class="text-decoration-none d-flex flex-column align-items-center {{ Route::is('experience') ? 'active' : '' }}">
 
                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                      <path fill="none" stroke="currentColor" stroke-width="1.5"
@@ -54,8 +56,8 @@
                  <span>Experiencia</span></a>
          </li>
          <li class="menu">
-             <a href="{{ route('courses') }}"
-                 class="text-decoration-none d-flex flex-column align-items-center {{ $currentPage == 'Courses' ? 'active' : '' }}">
+             <a wire:navigate.hover href="{{ route('courses') }}"
+                 class="text-decoration-none d-flex flex-column align-items-center {{ Route::is('courses') ? 'active' : '' }}">
 
                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                      <path fill="currentColor" fill-rule="evenodd"

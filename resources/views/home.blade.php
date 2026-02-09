@@ -1,7 +1,6 @@
-@extends('layouts.app')
-<title>Home</title>
 
-@section('content')
+
+<x-layouts.app>
     <div class="card_style main-cont position-relative">
 
         <x-title title="Desarrolladora Web Full Stack Jr" />
@@ -46,4 +45,4 @@
 
 
     </div>
-@endsection
+</x-layouts.app>

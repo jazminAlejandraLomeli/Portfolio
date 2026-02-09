@@ -8,14 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <title>Mi App</title>
+    <title>Portfalio</title>
 
-    @vite(['resources/css/app.css', 'resources/css/aside.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/css/aside.css', 'resources/js/app.js', 'resources/js/layouts/aside.js'])
+
+    @livewireStyles
+
 </head>
 
 <body>
 
-
+    
     <div class="layout ">
         <!-- Contenedor de datos personales  -->
         <aside class="sidebar">
@@ -23,12 +26,16 @@
 
         </aside>
         {{-- Contenedor Principal --}}
+
+        <div wire:loading.delay class="loading-bar"></div>
+
         <main class="container contenido">
             @include('layouts.nav')
 
-            @yield('content')
+            {{ $slot }}
         </main>
     </div>
+    @livewireScripts
 </body>
 
 </html>

@@ -63,4 +63,16 @@ h1 {
 
 body {
     font-family: roboto, sans-serif;
+    
 }
+
+
+ .loading-bar {
+            height: 3px;
+            background: #0d6efd;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }

@@ -1,7 +1,6 @@
-@extends('layouts.app')
-<title>Experince</title>
 
-@section('content')
+<x-layouts.app>
+
     <!-- Contenido de la vista -->
     <div class="card_style border p-3 main-cont">
         <x-title title="Educación" />
@@ -50,7 +49,7 @@
 
 
         <div>
-           @include('about.container-soft-skills')
+            @include('about.container-soft-skills')
         </div>
     </div>
-@endsection
+</x-layouts.app>

@@ -2,7 +2,7 @@
 .aside-card {
     background-color: var(--color-card);
     border: 1px solid var(--color-gray);
-    margin-top: 70px; /* Espacio para que la imagen sobresalga */
+    margin-top: 95px; /* Espacio para que la imagen sobresalga */
     border-radius: 15px;
     border-radius: 25px 2px 20px 2px;
     padding: 10px;

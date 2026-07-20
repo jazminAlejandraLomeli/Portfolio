@@ -125,18 +125,10 @@ body {
 }
 
 
-/* Efecto de entrada */
-.modern-title h1 {
-  animation: fadeInDown 1.5s ease forwards;
-  opacity: 0;
-}
-
 .modern-title h1 {
   color: var(--color-gray-3);
   position: relative;
   display: inline-block;
-  animation: fadeInDown 1.5s ease forwards;
-  opacity: 0;
 }
 
 .modern-title h1 .animation {

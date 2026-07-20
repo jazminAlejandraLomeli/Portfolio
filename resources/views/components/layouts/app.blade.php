@@ -10,7 +10,7 @@
 
     <title>Portfalio</title>
 
-    @vite(['resources/css/app.css', 'resources/css/aside.css', 'resources/js/app.js', 'resources/js/layouts/aside.js'])
+    @vite(['resources/css/app.css', 'resources/css/aside.css', 'resources/js/app.js', 'resources/js/layouts/nav.js'])
 
     @livewireStyles
 
@@ -20,17 +20,21 @@
 
     
     <div class="layout ">
-        <!-- Contenedor de datos personales  -->
-        <aside class="sidebar">
-            @include('layouts.aside')
+        @persist('aside')
+            <!-- Contenedor de datos personales  -->
+            <aside class="sidebar">
+                @include('layouts.aside')
 
-        </aside>
+            </aside>
+        @endpersist
         {{-- Contenedor Principal --}}
 
         <div wire:loading.delay class="loading-bar"></div>
 
         <main class="container contenido">
-            @include('layouts.nav')
+            @persist('nav')
+                @include('layouts.nav')
+            @endpersist
 
             {{ $slot }}
         </main>

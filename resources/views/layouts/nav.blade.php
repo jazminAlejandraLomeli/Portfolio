@@ -1,11 +1,11 @@
  
  <br> 
 <div class="navigation m-2 m-sm-0 px-3">
-     <ul class="mx-2 list-unstyled d-flex justify-content-around align-items-between gap-1 mb-0" data-aos="zoom-in">
+     <ul class="mx-2 list-unstyled d-flex justify-content-around align-items-between gap-1 mb-0">
          <li class="menu">
 
              <a wire:navigate.hover href="{{ route('home') }}"
-                 class="text-decoration-none d-flex flex-column align-items-center {{ Route::is('home') ? 'active' : '' }}">
+                 class="text-decoration-none d-flex flex-column align-items-center">
                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                          stroke-width="2">
@@ -19,7 +19,7 @@
          </li>
          <li class="menu">
              <a wire:navigate.hover href="{{ route('about') }}"
-                 class="text-decoration-none d-flex flex-column align-items-center {{ Route::is('about') ? 'active' : '' }}">
+                 class="text-decoration-none d-flex flex-column align-items-center">
 
                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48">
                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -36,7 +36,7 @@
          </li>
          <li class="menu">
              <a wire:navigate.hover href="{{ route('skills') }}"
-                 class="text-decoration-none d-flex flex-column align-items-center {{ Route::is('skills') ? 'active' : '' }}">
+                 class="text-decoration-none d-flex flex-column align-items-center">
 
 
                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
@@ -47,7 +47,7 @@
          </li>
          <li class="menu">
              <a wire:navigate.hover href="{{ route('experience') }}"
-                 class="text-decoration-none d-flex flex-column align-items-center {{ Route::is('experience') ? 'active' : '' }}">
+                 class="text-decoration-none d-flex flex-column align-items-center">
 
                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                      <path fill="none" stroke="currentColor" stroke-width="1.5"
@@ -57,7 +57,7 @@
          </li>
          <li class="menu">
              <a wire:navigate.hover href="{{ route('courses') }}"
-                 class="text-decoration-none d-flex flex-column align-items-center {{ Route::is('courses') ? 'active' : '' }}">
+                 class="text-decoration-none d-flex flex-column align-items-center">
 
                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                      <path fill="currentColor" fill-rule="evenodd"

@@ -10,7 +10,7 @@
                  < </span>Jazmin A. Lomelí <span> / > </span>
          </h1>
          <p class="text-muted">Jr Full-Stack Web Developer</p>
-         <x-title-animation animation=true text="Transformando sueños en " animationText="sitios web" />
+         <x-title-animation text="Transformando sueños en " animationText="sitios web" />
          <!-- <p class="phrase"> <i> "Transformando sueños en sitios web "</i></p> -->
      </div>
 
@@ -27,7 +27,8 @@
 
      {{-- Redes sociales  --}}
      @include('layouts.partials.aside.social-media')
-     {{-- Información de contacto F --}}
+     {{-- Información de contacto --}}
+     <br>
      @include('layouts.partials.aside.contact-information')
 
  </div>

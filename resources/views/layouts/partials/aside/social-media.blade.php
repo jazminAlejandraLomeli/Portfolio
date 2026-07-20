@@ -25,7 +25,7 @@
             </svg>
         </x-icon-social-media-component>
         {{-- Instagram --}}
-        <x-icon-social-media-component url="" targert="_blank">
+        <x-icon-social-media-component url="https://www.instagram.com/j_lomelis?igsh=MTN3N3VlcXU4d2RoYw==" targert="_blank">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256">
                 <g fill="none">
                     <rect width="256" height="256" fill="url(#IconifyId19903727e4a684aeb2)" rx="60" />
@@ -52,12 +52,22 @@
             </svg>
         </x-icon-social-media-component>
         {{-- Facebook --}}
-        <x-icon-social-media-component url="" targert="_blank">
+        <!-- <x-icon-social-media-component url="" targert="_blank">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256">
                 <path fill="#1877F2"
                     d="M256 128C256 57.308 198.692 0 128 0S0 57.308 0 128c0 63.888 46.808 116.843 108 126.445V165H75.5v-37H108V99.8c0-32.08 19.11-49.8 48.348-49.8C170.352 50 185 52.5 185 52.5V84h-16.14C152.959 84 148 93.867 148 103.99V128h35.5l-5.675 37H148v89.445c61.192-9.602 108-62.556 108-126.445" />
                 <path fill="#FFF"
                     d="m177.825 165l5.675-37H148v-24.01C148 93.866 152.959 84 168.86 84H185V52.5S170.352 50 156.347 50C127.11 50 108 67.72 108 99.8V128H75.5v37H108v89.445A129 129 0 0 0 128 256a129 129 0 0 0 20-1.555V165z" />
+            </svg>
+        </x-icon-social-media-component> -->
+
+        <x-icon-social-media-component url="" targert="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="22.6171875" viewBox="0 0 256 193">
+                <path fill="#4285F4" d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455z" />
+                <path fill="#34A853" d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798z" />
+                <path fill="#EA4335" d="m58.182 93.14l-4.174-38.647l4.174-36.989L128 69.868l69.818-52.364l4.669 34.992l-4.669 40.644L128 145.504z" />
+                <path fill="#FBBC04" d="M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945z" />
+                <path fill="#C5221F" d="m0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23z" />
             </svg>
         </x-icon-social-media-component>
 

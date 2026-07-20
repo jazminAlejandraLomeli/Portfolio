@@ -1,1 +1,0 @@
-function n(){document.querySelectorAll(".animate-once").forEach((e,a)=>{const t="animated_"+a;sessionStorage.getItem(t)?e.classList.remove("animate__animated",...Array.from(e.classList).filter(s=>s.startsWith("animate__"))):sessionStorage.setItem(t,"true")})}document.addEventListener("DOMContentLoaded",n);document.addEventListener("livewire:navigated",n);

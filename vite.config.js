@@ -13,7 +13,7 @@ export default defineConfig({
                 "resources/css/carrousel.css",
                 "resources/css/skills.css",
                 "resources/js/experience/index.js",
-                "resources/js/layouts/aside.js",
+                // "resources/js/layouts/aside.js",
             ],
             refresh: true,
         }),

@@ -14,6 +14,7 @@ export default defineConfig({
                 "resources/css/skills.css",
                 "resources/js/experience/index.js",
                 // "resources/js/layouts/aside.js",
+                "resources/js/layouts/nav.js",
             ],
             refresh: true,
         }),

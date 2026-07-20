@@ -62,5 +62,11 @@
     "name": "index",
     "src": "resources/js/experience/index.js",
     "isEntry": true
+  },
+  "resources/js/layouts/nav.js": {
+    "file": "assets/nav-BLhnChh8.js",
+    "name": "nav",
+    "src": "resources/js/layouts/nav.js",
+    "isEntry": true
   }
 }

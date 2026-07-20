@@ -1,0 +1,1 @@
+function t(){const n=window.location.pathname;document.querySelectorAll(".navigation .menu a").forEach(e=>{e.classList.toggle("active",e.pathname===n)})}document.addEventListener("DOMContentLoaded",t);document.addEventListener("livewire:navigated",t);

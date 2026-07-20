@@ -61,7 +61,7 @@
             </svg>
         </x-icon-social-media-component> -->
 
-        <x-icon-social-media-component url="mailto:talejandrazermeno18@gmail.com" target="_blank">
+        <x-icon-social-media-component url="mailto:alejandrazermeno18@gmail.com" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="22.6171875" viewBox="0 0 256 193">
                 <path fill="#4285F4" d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455z" />
                 <path fill="#34A853" d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798z" />

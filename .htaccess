@@ -1,0 +1,11 @@
+DirectoryIndex public/index.php
+  <IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+    Options -MultiViews -Indexes
+    </IfModule>
+    RewriteEngine On
+# Redirigir a la carpeta public
+RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ public/$1 [L]
+    </IfModule>

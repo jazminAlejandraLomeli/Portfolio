@@ -1,7 +1,6 @@
 <?php
 // Datos de los proyectos que he desarrollado
 return [
-
     'projects' => [
         // RH-SISTEM
         [
@@ -22,7 +21,6 @@ return [
                     'name' => 'Laravel (PHP)',
                     'color' => 'laravel'
                 ],
-
                 [
                     'name' => 'Bootstrap',
                     'color' => 'Bootstrap'

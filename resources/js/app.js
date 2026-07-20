@@ -22,3 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
         new bootstrap.Carousel(carousel);
     });
 });
+
+// Transición suave del contenido entre rutas
+document.addEventListener('livewire:navigating', () => {
+    document.body.classList.add('wire-navigating');
+});
+
+document.addEventListener('livewire:navigated', () => {
+    document.body.classList.remove('wire-navigating');
+});

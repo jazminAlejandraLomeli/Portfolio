@@ -1,7 +1,7 @@
  
  <br> 
 <div class="navigation m-2 m-sm-0 px-3">
-     <ul class="mx-2 list-unstyled d-flex justify-content-around align-items-between gap-1 mb-0" data-aos="zoom-in">
+     <ul class="mx-2 list-unstyled d-flex justify-content-around align-items-between gap-1 mb-0">
          <li class="menu">
 
              <a wire:navigate.hover href="{{ route('home') }}"

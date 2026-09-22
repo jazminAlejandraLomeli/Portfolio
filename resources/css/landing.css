@@ -1,0 +1,281 @@
+@import "tailwindcss";
+
+/* Blade no es escaneado por defecto en todos los setups: lo declaramos explícito */
+@source "../views";
+/* Los badges de tecnología arman sus clases en config/tech-colors.php.
+   Sin este @source, Tailwind no las ve y las purga del build. */
+@source "../../config";
+
+/* ==========================================================================
+   1. PALETA Y TOKENS  (Tailwind v4 usa configuración CSS-first, sin JS)
+   Cada variable aquí genera utilidades: --color-brand-700 -> bg-brand-700
+   ========================================================================== */
+@theme {
+    /* Índigo de marca (tu --color-primary #1A237E vive en el 700) */
+    --color-brand-50: #eef0fb;
+    --color-brand-100: #dde1f6;
+    --color-brand-200: #b8c0ea;
+    --color-brand-300: #8d99da;
+    --color-brand-400: #6270c5;
+    --color-brand-500: #404fae;
+    --color-brand-600: #2b3893;
+    --color-brand-700: #1a237e;
+    --color-brand-800: #141a5e;
+    --color-brand-900: #0e1240;
+    --color-brand-950: #070a26;
+
+    /* Rosa de acento (tu --color-secondary) */
+    --color-accent-100: #fde3ec;
+    --color-accent-200: #fac3d8;
+    --color-accent-300: #f596b9;
+    --color-accent-400: #ef5d92;
+    --color-accent-500: #e91e63;
+    --color-accent-600: #c31350;
+
+    /* Cian (tu --color-tertiary) */
+    --color-aqua-100: #d6f7fb;
+    --color-aqua-200: #a5edf5;
+    --color-aqua-300: #6adeeb;
+    --color-aqua-400: #26cadd;
+    --color-aqua-500: #00bcd4;
+    --color-aqua-600: #00acc1;
+
+    /* Neutros CÁLIDOS: esto es lo que convierte "tech" en "warm tech" */
+    --color-sand-50: #faf8f5;
+    --color-sand-100: #f4efe8;
+    --color-sand-200: #e8dfd4;
+    --color-sand-300: #d5c7b7;
+    --color-sand-500: #9c8b7b;
+    --color-sand-700: #5e5248;
+    --color-sand-900: #2e2823;
+
+    /* Tipografía */
+    --font-display: "Fraunces", "Poppins", Georgia, serif;
+    --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+    /* Formas y curvas */
+    --radius-card: 1.5rem;
+    --radius-sheet: 1.75rem;
+    --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-sheet: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* ==========================================================================
+   2. BASE
+   ========================================================================== */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        /* compensa cualquier header sticky al hacer scroll a un #id */
+        scroll-padding-top: 5rem;
+    }
+
+    body {
+        margin: 0;
+        font-family: var(--font-sans);
+        color: var(--color-brand-900);
+        background-color: var(--color-sand-50);
+        background-image: url("../img/Degradado.avif");
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* Velo: deja pasar el degradado de marca pero devuelve el contraste.
+       Sin esto el texto índigo se pierde sobre las zonas moradas. */
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background: linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--color-sand-50) 74%, transparent),
+            color-mix(in srgb, var(--color-sand-50) 62%, transparent) 45%,
+            color-mix(in srgb, var(--color-sand-50) 82%, transparent)
+        );
+    }
+
+    /* El fondo fijo es caro en móvil: lo soltamos */
+    @media (max-width: 768px) {
+        body {
+            background-attachment: scroll;
+        }
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-accent-500);
+        outline-offset: 3px;
+        border-radius: 6px;
+    }
+}
+
+/* ==========================================================================
+   3. UTILIDADES PROPIAS
+   ========================================================================== */
+
+/* Glassmorphism suave: legible sobre el degradado, sin lavar el texto */
+@utility glass {
+    background: color-mix(in srgb, white 66%, transparent);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border: 1px solid color-mix(in srgb, white 72%, transparent);
+    box-shadow:
+        inset 0 1px 0 0 rgb(255 255 255 / 0.65),
+        0 24px 60px -28px rgb(26 35 126 / 0.42);
+}
+
+@utility glass-strong {
+    background: color-mix(in srgb, white 88%, transparent);
+    backdrop-filter: blur(28px) saturate(160%);
+    -webkit-backdrop-filter: blur(28px) saturate(160%);
+    border: 1px solid color-mix(in srgb, white 80%, transparent);
+    box-shadow: 0 32px 80px -24px rgb(14 18 64 / 0.45);
+}
+
+/* Degradado de marca para texto */
+@utility text-gradient-brand {
+    background-image: linear-gradient(
+        100deg,
+        var(--color-brand-700),
+        var(--color-accent-500) 55%,
+        var(--color-aqua-600)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Oculta la barra de scroll del carrusel sin perder el scroll */
+@utility no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   4. ANIMACIONES AL SCROLL
+   Patrón: un contenedor recibe .is-in (vía x-intersect de Alpine) y los
+   hijos .reveal entran escalonados usando --i como índice.
+   Solo animamos opacity/transform => compositor puro => 60 FPS.
+   ========================================================================== */
+@layer components {
+    .reveal {
+        opacity: 0;
+        transform: translate3d(0, 28px, 0) scale(0.98);
+        transition:
+            opacity 0.75s var(--ease-soft),
+            transform 0.75s var(--ease-soft);
+        transition-delay: calc(var(--i, 0) * 85ms);
+    }
+
+    .is-in .reveal,
+    .reveal.is-in {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* Revelado palabra por palabra del H1 */
+    .reveal-word {
+        display: inline-block;
+        opacity: 0;
+        transform: translate3d(0, 0.7em, 0) rotate(3deg);
+        transition:
+            opacity 0.7s var(--ease-soft),
+            transform 0.7s var(--ease-soft);
+        transition-delay: calc(var(--i, 0) * 65ms);
+    }
+
+    .is-in .reveal-word {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* Línea del timeline que se "dibuja" al hacer scroll */
+    .timeline-line {
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: transform 1.1s var(--ease-soft);
+    }
+    .is-in .timeline-line {
+        transform: scaleY(1);
+    }
+
+    /* Manchas de color del fondo (mesh) */
+    .blob {
+        position: absolute;
+        border-radius: 9999px;
+        filter: blur(80px);
+        opacity: 0.34;
+        animation: blob-drift 18s var(--ease-soft) infinite alternate;
+    }
+
+    @keyframes blob-drift {
+        from {
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+        to {
+            transform: translate3d(28px, -34px, 0) scale(1.12);
+        }
+    }
+
+    @keyframes pulse-dot {
+        0%,
+        100% {
+            box-shadow: 0 0 0 0 rgb(34 197 94 / 0.55);
+        }
+        70% {
+            box-shadow: 0 0 0 9px rgb(34 197 94 / 0);
+        }
+    }
+    .dot-live {
+        animation: pulse-dot 2.2s ease-out infinite;
+    }
+
+    @keyframes scroll-cue {
+        0% {
+            transform: translateY(0);
+            opacity: 0;
+        }
+        35% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(14px);
+            opacity: 0;
+        }
+    }
+    .scroll-cue {
+        animation: scroll-cue 1.9s var(--ease-soft) infinite;
+    }
+}
+
+/* ==========================================================================
+   5. ACCESIBILIDAD: respeta a quien pidió menos movimiento
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    .reveal,
+    .reveal-word,
+    .timeline-line {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    .blob,
+    .dot-live,
+    .scroll-cue {
+        animation: none !important;
+    }
+}
+
+/* Evita el parpadeo del modal antes de que Alpine arranque */
+[x-cloak] {
+    display: none !important;
+}

@@ -26,6 +26,15 @@
       "carrousel.css"
     ]
   },
+  "resources/css/landing.css": {
+    "file": "assets/landing-DCQdk0QF.css",
+    "src": "resources/css/landing.css",
+    "isEntry": true,
+    "name": "landing",
+    "names": [
+      "landing.css"
+    ]
+  },
   "resources/css/notavailable.css": {
     "file": "assets/notavailable-GjQ5t_6T.css",
     "src": "resources/css/notavailable.css",

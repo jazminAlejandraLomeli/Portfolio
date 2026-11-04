@@ -36,6 +36,7 @@ return [
             'images' => [
                 'img/detalles-eternos/banner.webp',
                 'img/detalles-eternos/templates.webp',
+                'img/detalles-eternos/template-3.webp',
             ],
             'technologies' => [
                 ['name' => 'React', 'color' => 'react'],

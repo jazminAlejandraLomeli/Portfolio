@@ -8,6 +8,7 @@ export default defineConfig({
             input: [
                 "resources/css/app.css",
                 "resources/css/landing.css",
+                "resources/js/landing.js",
                 "resources/js/app.js",
                 "resources/css/aside.css",
                 "resources/css/notavailable.css",

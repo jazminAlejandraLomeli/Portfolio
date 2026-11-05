@@ -19,7 +19,7 @@
 
         {{-- Foto --}}
         <div class="reveal justify-self-center md:justify-self-start" style="--i: 0">
-            <img src="{{ asset('img/Profile2.webp') }}" alt="Retrato de {{ config('portfolio.name') }}"
+            <img src="{{ asset('img/Profile2-352.webp') }}" alt="Retrato de {{ config('portfolio.name') }}"
                 loading="lazy" decoding="async" width="176" height="176"
                 class="h-36 w-36 rounded-2xl object-cover shadow-md ring-1 ring-white/70 md:h-44 md:w-44">
         </div>

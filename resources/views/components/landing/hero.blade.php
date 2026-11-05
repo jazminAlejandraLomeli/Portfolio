@@ -26,8 +26,7 @@
         : 'mailto:' . $cfg['email'] . '?subject=' . rawurlencode('Proyecto web') . '&body=' . $waMessage;
 @endphp
 
-<section id="inicio" class="relative isolate flex min-h-[100svh] items-center overflow-hidden px-5 py-24 sm:px-8"
-    x-data x-init="$nextTick(() => $el.classList.add('is-in'))">
+<section id="inicio" class="hero-intro relative isolate flex min-h-[100svh] items-center overflow-hidden px-5 py-24 sm:px-8">
 
     {{-- Mesh decorativo: refuerza el degradado del fondo de marca --}}
     <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">

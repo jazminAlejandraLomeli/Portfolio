@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+/* Fuentes self-hosted (antes venían de Google Fonts y bloqueaban el render).
+   Solo el subconjunto latino de Poppins y los pesos que se usan; Fraunces
+   variable con eje de tamaño óptico, igual que la versión de Google. */
+@import "@fontsource/poppins/latin-400.css";
+@import "@fontsource/poppins/latin-500.css";
+@import "@fontsource/poppins/latin-600.css";
+@import "@fontsource-variable/fraunces/opsz.css";
+
+/* Respaldo con métricas de Poppins: mientras carga la fuente real, Arial
+   ocupa el mismo espacio, así el cambio (font-display: swap) no mueve el
+   layout (CLS). */
+@font-face {
+    font-family: "Poppins Fallback";
+    src: local("Arial");
+    ascent-override: 93.62%;
+    descent-override: 31.21%;
+    line-gap-override: 8.92%;
+    size-adjust: 112.16%;
+}
+
 /* Blade no es escaneado por defecto en todos los setups: lo declaramos explícito */
 @source "../views";
 /* Los badges de tecnología arman sus clases en config/tech-colors.php.
@@ -50,8 +70,8 @@
     --color-sand-900: #2e2823;
 
     /* Tipografía */
-    --font-display: "Fraunces", "Poppins", Georgia, serif;
-    --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Fraunces Variable", "Fraunces", "Poppins", Georgia, serif;
+    --font-sans: "Poppins", "Poppins Fallback", ui-sans-serif, system-ui, sans-serif;
 
     /* Formas y curvas */
     --radius-card: 1.5rem;
@@ -195,6 +215,48 @@
         transform: none;
     }
 
+    /* Hero: misma entrada, pero con @keyframes en vez de esperar a que
+       Alpine agregue .is-in. Así el primer pantallazo (y el LCP) no depende
+       de que descargue y arranque el JavaScript. Retrasos más cortos para
+       que el texto principal aparezca rápido. */
+    @keyframes reveal-in {
+        from {
+            opacity: 0;
+            transform: translate3d(0, 28px, 0) scale(0.98);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+    @keyframes word-in {
+        from {
+            opacity: 0;
+            transform: translate3d(0, 0.7em, 0) rotate(3deg);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+    /* fill-mode "backwards" (no "both"): al terminar, la palabra vuelve a
+       estilos normales y deja de ser una capa animada. Con "both" se quedaba
+       en su propia capa y rompía el background-clip:text del degradado. */
+    .hero-intro .reveal,
+    .hero-intro .reveal-word {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+    .hero-intro .reveal {
+        animation: reveal-in 0.7s var(--ease-soft) backwards;
+        animation-delay: calc(var(--i, 0) * 40ms);
+    }
+    .hero-intro .reveal-word {
+        animation: word-in 0.65s var(--ease-soft) backwards;
+        animation-delay: calc(var(--i, 0) * 40ms);
+    }
+
     /* Línea del timeline que se "dibuja" al hacer scroll */
     .timeline-line {
         transform-origin: top;
@@ -267,6 +329,7 @@
         opacity: 1 !important;
         transform: none !important;
         transition: none !important;
+        animation: none !important;
     }
     .blob,
     .dot-live,

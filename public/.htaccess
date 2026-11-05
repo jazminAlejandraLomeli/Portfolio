@@ -23,3 +23,15 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+# Caché del navegador / CDN
+# /build lleva hash en el nombre (cambia en cada build): se puede guardar 1 año.
+# Imágenes y fuentes: 30 días.
+<IfModule mod_headers.c>
+    <If "%{REQUEST_URI} =~ m#^/build/#">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </If>
+    <ElseIf "%{REQUEST_URI} =~ m#\.(webp|avif|png|jpe?g|svg|ico|woff2?)$#i">
+        Header set Cache-Control "public, max-age=2592000"
+    </ElseIf>
+</IfModule>

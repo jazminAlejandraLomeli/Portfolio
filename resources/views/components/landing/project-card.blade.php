@@ -10,9 +10,23 @@
     // El config mezcla URLs remotas (placeholders) con archivos propios en
     // public/. Las remotas pasan tal cual; las locales van por asset(), que
     // arma la URL correcta SIN el prefijo "public/".
-    $coverUrl = $cover
-        ? (\Illuminate\Support\Str::startsWith($cover, ['http://', 'https://']) ? $cover : asset($cover))
-        : null;
+    $isRemote = $cover && \Illuminate\Support\Str::startsWith($cover, ['http://', 'https://']);
+    $coverUrl = $cover ? ($isRemote ? $cover : asset($cover)) : null;
+
+    // Versiones reducidas (banner-800.webp, banner-1280.webp) junto al
+    // original: la tarjeta se ve a ~370-580 px, no necesita el de 3780 px.
+    $srcset = [];
+    if ($cover && !$isRemote) {
+        foreach ([800, 1280] as $w) {
+            $variant = preg_replace('/\.(\w+)$/', "-{$w}.$1", $cover);
+            if (is_file(public_path($variant))) {
+                $srcset[] = asset($variant) . " {$w}w";
+            }
+        }
+    }
+    $sizes = $featured
+        ? '(min-width: 1152px) 576px, (min-width: 768px) 50vw, 100vw'
+        : '(min-width: 1152px) 370px, (min-width: 640px) 50vw, 100vw';
 @endphp
 
 {{--
@@ -41,6 +55,8 @@
     ])>
         @if ($coverUrl)
             <img src="{{ $coverUrl }}" alt="Vista previa de {{ $project['title'] }}" loading="lazy" decoding="async"
+                @if ($srcset) srcset="{{ implode(', ', $srcset) }}" sizes="{{ $sizes }}" @endif
+                width="1280" height="640"
                 class="h-full w-full object-cover transition-transform duration-700 ease-soft group-hover:scale-[1.06]">
         @endif
 

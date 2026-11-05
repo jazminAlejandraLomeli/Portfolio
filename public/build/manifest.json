@@ -1,4 +1,40 @@
 {
+  "node_modules/@fontsource-variable/fraunces/files/fraunces-latin-ext-opsz-normal.woff2": {
+    "file": "assets/fraunces-latin-ext-opsz-normal-CJcjJNj7.woff2",
+    "src": "node_modules/@fontsource-variable/fraunces/files/fraunces-latin-ext-opsz-normal.woff2"
+  },
+  "node_modules/@fontsource-variable/fraunces/files/fraunces-latin-opsz-normal.woff2": {
+    "file": "assets/fraunces-latin-opsz-normal-DihXLNYH.woff2",
+    "src": "node_modules/@fontsource-variable/fraunces/files/fraunces-latin-opsz-normal.woff2"
+  },
+  "node_modules/@fontsource-variable/fraunces/files/fraunces-vietnamese-opsz-normal.woff2": {
+    "file": "assets/fraunces-vietnamese-opsz-normal-Czevyj-6.woff2",
+    "src": "node_modules/@fontsource-variable/fraunces/files/fraunces-vietnamese-opsz-normal.woff2"
+  },
+  "node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff": {
+    "file": "assets/poppins-latin-400-normal-BOb3E3N0.woff",
+    "src": "node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff"
+  },
+  "node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff2": {
+    "file": "assets/poppins-latin-400-normal-cpxAROuN.woff2",
+    "src": "node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff2"
+  },
+  "node_modules/@fontsource/poppins/files/poppins-latin-500-normal.woff": {
+    "file": "assets/poppins-latin-500-normal-DGXqpDMm.woff",
+    "src": "node_modules/@fontsource/poppins/files/poppins-latin-500-normal.woff"
+  },
+  "node_modules/@fontsource/poppins/files/poppins-latin-500-normal.woff2": {
+    "file": "assets/poppins-latin-500-normal-C8OXljZJ.woff2",
+    "src": "node_modules/@fontsource/poppins/files/poppins-latin-500-normal.woff2"
+  },
+  "node_modules/@fontsource/poppins/files/poppins-latin-600-normal.woff": {
+    "file": "assets/poppins-latin-600-normal-BJdTmd5m.woff",
+    "src": "node_modules/@fontsource/poppins/files/poppins-latin-600-normal.woff"
+  },
+  "node_modules/@fontsource/poppins/files/poppins-latin-600-normal.woff2": {
+    "file": "assets/poppins-latin-600-normal-zEkxB9Mr.woff2",
+    "src": "node_modules/@fontsource/poppins/files/poppins-latin-600-normal.woff2"
+  },
   "resources/css/app.css": {
     "file": "assets/app-CWXOqGFS.css",
     "src": "resources/css/app.css",
@@ -27,7 +63,7 @@
     ]
   },
   "resources/css/landing.css": {
-    "file": "assets/landing-DCQdk0QF.css",
+    "file": "assets/landing-GrwsOy0b.css",
     "src": "resources/css/landing.css",
     "isEntry": true,
     "name": "landing",
@@ -58,7 +94,7 @@
     "src": "resources/img/Degradado.avif"
   },
   "resources/js/app.js": {
-    "file": "assets/app-DgPwPnoq.js",
+    "file": "assets/app-Dk1aXHvz.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -70,6 +106,12 @@
     "file": "assets/index-erYywSEa.js",
     "name": "index",
     "src": "resources/js/experience/index.js",
+    "isEntry": true
+  },
+  "resources/js/landing.js": {
+    "file": "assets/landing-BZcbufPX.js",
+    "name": "landing",
+    "src": "resources/js/landing.js",
     "isEntry": true
   },
   "resources/js/layouts/nav.js": {

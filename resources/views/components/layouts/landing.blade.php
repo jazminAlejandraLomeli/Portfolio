@@ -12,15 +12,14 @@
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $description }}">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    {{-- Fuentes self-hosted: precargamos la del texto (LCP) y la del titular
+         para que lleguen junto con el CSS y no después. --}}
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="{{ Vite::asset('node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff2') }}">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="{{ Vite::asset('node_modules/@fontsource-variable/fraunces/files/fraunces-latin-opsz-normal.woff2') }}">
 
-    @vite(['resources/css/landing.css'])
-
-    @livewireStyles
+    @vite(['resources/css/landing.css', 'resources/js/landing.js'])
 </head>
 
 <body class="font-sans text-brand-900 antialiased">
@@ -35,8 +34,6 @@
         {{ $slot }}
     </main>
 
-  
-    @livewireScripts
 </body>
 
 </html>

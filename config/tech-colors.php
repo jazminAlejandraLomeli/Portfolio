@@ -36,6 +36,7 @@ return [
     'laravel' => 'bg-red-50 text-red-700 ring-red-600/15',
     'php' => 'bg-indigo-50 text-indigo-700 ring-indigo-600/15',
     'livewire' => 'bg-pink-50 text-pink-700 ring-pink-600/15',
+    'inertia' => 'bg-purple-50 text-purple-700 ring-purple-600/15',
     'blade' => 'bg-red-50 text-red-700 ring-red-600/15',
     'node' => 'bg-green-50 text-green-700 ring-green-600/15',
     'axios' => 'bg-indigo-50 text-indigo-700 ring-indigo-600/15',

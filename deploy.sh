@@ -22,7 +22,11 @@ echo "→ Instalando dependencias de PHP…"
 "$PHP_BIN" -d disable_functions= "$(command -v composer)" install --no-dev --optimize-autoloader --no-interaction
 
 echo "→ Limpiando y preparando cachés…"
-"$PHP_BIN" artisan optimize:clear
+# Sin optimize:clear: también vacía la caché de la base de datos y el
+# portafolio no usa base de datos.
+"$PHP_BIN" artisan config:clear
+"$PHP_BIN" artisan route:clear
+"$PHP_BIN" artisan view:clear
 "$PHP_BIN" artisan config:cache
 "$PHP_BIN" artisan view:cache
 

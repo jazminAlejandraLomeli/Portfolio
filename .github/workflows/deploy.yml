@@ -34,7 +34,7 @@ jobs:
         run: |
           HOST=$(printf '%s' "$HOST" | tr -d ' \r\n\t`')
           ssh -i ~/.ssh/id_deploy -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes \
-            -p 65002 "$HOST" "cd ~/domains/jazmin-lomeli.com/public_html && bash deploy.sh"
+            -p 65002 "$HOST" "cd ~/domains/jazmin-lomeli.com/public_html && git pull --ff-only && bash deploy.sh"
 
       - name: Revisar que el sitio responda
         run: |

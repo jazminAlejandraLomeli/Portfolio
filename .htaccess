@@ -4,6 +4,15 @@ DirectoryIndex public/index.php
     Options -MultiViews -Indexes
     </IfModule>
     RewriteEngine On
+
+    # Archivos internos del proyecto: nunca se entregan por la web
+    # (logs, configuración, código, dependencias). Solo aplica a jazmin-lomeli.com,
+    # así no afecta a la demo ni a las otras carpetas de public_html.
+    RewriteCond %{HTTP_HOST} ^(www\.)?jazmin-lomeli\.com$ [NC]
+    RewriteRule ^(app|bootstrap|config|database|resources|routes|storage|tests|vendor|node_modules|\.git)(/|$) - [F,L]
+    RewriteCond %{HTTP_HOST} ^(www\.)?jazmin-lomeli\.com$ [NC]
+    RewriteRule ^(composer\.(json|lock)|package(-lock)?\.json|artisan|phpunit\.xml|vite\.config\.js|README\.md|deploy\.sh)$ - [F,L]
+
 # Redirigir a la carpeta public
 RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f

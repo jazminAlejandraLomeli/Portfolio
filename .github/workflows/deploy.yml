@@ -1,0 +1,44 @@
+name: deploy
+
+# Sube el portafolio a Hostinger en cada push a main.
+# Secretos (repo → Settings → Secrets and variables → Actions):
+#   SSH_PRIVATE_KEY  llave privada que GitHub usa para entrar al servidor
+#   SSH_HOST         usuario@ip de Hostinger
+#   SSH_KNOWN_HOSTS  huella del servidor
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # botón "Run workflow" para desplegar a mano
+
+concurrency:
+  group: deploy-portfolio
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Preparar la llave SSH
+        env:
+          KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          KNOWN: ${{ secrets.SSH_KNOWN_HOSTS }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$KEY" | tr -d '\r' > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          printf '%s\n' "$KNOWN" | tr -d '\r`' | sed 's/^ *//; s/ *$//' > ~/.ssh/known_hosts
+
+      - name: Correr deploy.sh en Hostinger
+        env:
+          HOST: ${{ secrets.SSH_HOST }}
+        run: |
+          HOST=$(printf '%s' "$HOST" | tr -d ' \r\n\t`')
+          ssh -i ~/.ssh/id_deploy -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            -p 65002 "$HOST" "cd ~/domains/jazmin-lomeli.com/public_html && bash deploy.sh"
+
+      - name: Revisar que el sitio responda
+        run: |
+          sleep 5
+          code=$(curl -s -o /dev/null -w "%{http_code}" https://jazmin-lomeli.com)
+          echo "HTTP $code"
+          test "$code" = "200"

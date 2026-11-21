@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .glass { fill: #f596b9; }
+    .base { fill: #e91e63; }
+    .code { stroke: #1a237e; }
+    .halo { stroke: #fff; }
+    @media (prefers-color-scheme: dark) {
+      .glass { fill: #c31350; }
+      .base { fill: #f596b9; }
+      .code { stroke: #dde1f6; }
+      .halo { stroke: #0e1240; }
+    }
+  </style>
+  <!-- Foco (idea), de fondo -->
+  <path class="glass" d="M32 4C19.3 4 10 13.6 10 25.6c0 7.7 3.8 13.2 8.2 17.4c2.1 2 3.2 4.2 3.2 7h21.2c0-2.8 1.1-5 3.2-7C50.2 38.8 54 33.3 54 25.6C54 13.6 44.7 4 32 4z"/>
+  <rect class="base" x="21.5" y="52" width="21" height="4" rx="2"/>
+  <rect class="base" x="25" y="58" width="14" height="3.5" rx="1.75"/>
+  <!-- </> al frente: un contorno claro lo separa del foco -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g class="halo" stroke-width="10">
+      <polyline points="19,18 9,28 19,38"/>
+      <polyline points="45,18 55,28 45,38"/>
+      <line x1="36" y1="15" x2="28" y2="41"/>
+    </g>
+    <g class="code" stroke-width="5">
+      <polyline points="19,18 9,28 19,38"/>
+      <polyline points="45,18 55,28 45,38"/>
+      <line x1="36" y1="15" x2="28" y2="41"/>
+    </g>
+  </g>
+</svg>

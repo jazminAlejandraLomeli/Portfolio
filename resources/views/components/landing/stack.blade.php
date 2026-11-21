@@ -26,7 +26,7 @@
                     <ul class="mt-3 flex flex-wrap gap-2">
                         @foreach ($items as $item)
                             <li
-                                class="inline-flex items-center gap-2 rounded-full bg-white/65 px-3 py-1.5 text-sm text-brand-800 ring-1 ring-white/70 transition-colors duration-200 hover:bg-white [&_svg]:h-4 [&_svg]:w-4">
+                                class="inline-flex items-center gap-2 rounded-full bg-white/65 px-3 py-1.5 text-sm text-brand-800 ring-1 ring-white/70 transition-colors duration-200 hover:bg-white [&_svg]:h-4 [&_svg]:w-4 [&_img]:h-4 [&_img]:w-4 [&_img]:shrink-0">
                                 {!! $item['icon'] !!}
                                 <span>{{ $item['name'] }}</span>
                             </li>

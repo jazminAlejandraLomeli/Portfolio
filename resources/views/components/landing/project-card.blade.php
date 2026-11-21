@@ -6,6 +6,7 @@
 
 @php
     $cover = $project['cover'] ?? ($project['images'][0] ?? null);
+    $coverPosition = $project['cover_position'] ?? 'center';
 
     // El config mezcla URLs remotas (placeholders) con archivos propios en
     // public/. Las remotas pasan tal cual; las locales van por asset(), que
@@ -57,13 +58,19 @@
             <img src="{{ $coverUrl }}" alt="Vista previa de {{ $project['title'] }}" loading="lazy" decoding="async"
                 @if ($srcset) srcset="{{ implode(', ', $srcset) }}" sizes="{{ $sizes }}" @endif
                 width="1280" height="640"
-                class="h-full w-full object-cover transition-transform duration-700 ease-soft group-hover:scale-[1.06]">
+                @class([
+                    'h-full w-full object-cover transition-transform duration-700 ease-soft group-hover:scale-[1.06]',
+                    // Cada portada se ancla donde está su título (config: cover_position)
+                    'object-left' => $coverPosition === 'left',
+                    'object-center' => $coverPosition === 'center',
+                    'object-right' => $coverPosition === 'right',
+                ])>
         @endif
 
         @if ($featured)
             <span
                 class="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 rounded-full bg-brand-900/85 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
-                ★ Caso destacado
+                Caso destacado
             </span>
         @endif
     </div>

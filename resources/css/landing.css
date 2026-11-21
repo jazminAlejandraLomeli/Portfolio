@@ -7,6 +7,9 @@
 @import "@fontsource/poppins/latin-500.css";
 @import "@fontsource/poppins/latin-600.css";
 @import "@fontsource-variable/fraunces/opsz.css";
+/* Itálica de Fraunces: es la que da énfasis en los titulares (en lugar de
+   texto con degradado). */
+@import "@fontsource-variable/fraunces/opsz-italic.css";
 
 /* Respaldo con métricas de Poppins: mientras carga la fuente real, Arial
    ocupa el mismo espacio, así el cambio (font-display: swap) no mueve el
@@ -130,6 +133,46 @@
         outline-offset: 3px;
         border-radius: 6px;
     }
+
+    /* Las partes del navegador también llevan la paleta */
+    ::selection {
+        background: var(--color-accent-200);
+        color: var(--color-brand-900);
+    }
+
+    html {
+        caret-color: var(--color-accent-500);
+        scrollbar-color: var(--color-brand-300) transparent;
+    }
+}
+
+/* Cursor de la máquina de escribir del titular */
+@layer components {
+    .typewriter-caret {
+        display: inline-block;
+        width: 0.07em;
+        height: 0.82em;
+        margin-left: 0.08em;
+        vertical-align: -0.06em;
+        border-radius: 1px;
+        background: currentColor;
+        transition: opacity 0.4s var(--ease-soft);
+        animation: caret-blink 0.9s steps(1) infinite;
+    }
+
+    @keyframes caret-blink {
+        50% {
+            visibility: hidden;
+        }
+    }
+}
+
+/* Énfasis de los titulares: itálica de Fraunces en el rosa de marca */
+@utility emphasis {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--color-accent-600);
+    font-variation-settings: "opsz" 144;
 }
 
 /* ==========================================================================
@@ -153,19 +196,6 @@
     -webkit-backdrop-filter: blur(28px) saturate(160%);
     border: 1px solid color-mix(in srgb, white 80%, transparent);
     box-shadow: 0 32px 80px -24px rgb(14 18 64 / 0.45);
-}
-
-/* Degradado de marca para texto */
-@utility text-gradient-brand {
-    background-image: linear-gradient(
-        100deg,
-        var(--color-brand-700),
-        var(--color-accent-500) 55%,
-        var(--color-aqua-600)
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
 }
 
 /* Oculta la barra de scroll del carrusel sin perder el scroll */
@@ -267,52 +297,12 @@
         transform: scaleY(1);
     }
 
-    /* Manchas de color del fondo (mesh) */
+    /* Manchas de color del fondo (fijas: el movimiento lo lleva el titular) */
     .blob {
         position: absolute;
         border-radius: 9999px;
         filter: blur(80px);
         opacity: 0.34;
-        animation: blob-drift 18s var(--ease-soft) infinite alternate;
-    }
-
-    @keyframes blob-drift {
-        from {
-            transform: translate3d(0, 0, 0) scale(1);
-        }
-        to {
-            transform: translate3d(28px, -34px, 0) scale(1.12);
-        }
-    }
-
-    @keyframes pulse-dot {
-        0%,
-        100% {
-            box-shadow: 0 0 0 0 rgb(34 197 94 / 0.55);
-        }
-        70% {
-            box-shadow: 0 0 0 9px rgb(34 197 94 / 0);
-        }
-    }
-    .dot-live {
-        animation: pulse-dot 2.2s ease-out infinite;
-    }
-
-    @keyframes scroll-cue {
-        0% {
-            transform: translateY(0);
-            opacity: 0;
-        }
-        35% {
-            opacity: 1;
-        }
-        100% {
-            transform: translateY(14px);
-            opacity: 0;
-        }
-    }
-    .scroll-cue {
-        animation: scroll-cue 1.9s var(--ease-soft) infinite;
     }
 }
 
@@ -329,11 +319,6 @@
         opacity: 1 !important;
         transform: none !important;
         transition: none !important;
-        animation: none !important;
-    }
-    .blob,
-    .dot-live,
-    .scroll-cue {
         animation: none !important;
     }
 }

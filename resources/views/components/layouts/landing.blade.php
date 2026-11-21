@@ -12,6 +12,11 @@
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $description }}">
 
+    {{-- Ícono de la pestaña: foco (idea) con </> de desarrollo --}}
+    <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="32x32">
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+
     {{-- Fuentes self-hosted: precargamos la del texto (LCP) y la del titular
          para que lleguen junto con el CSS y no después. --}}
     <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -20,6 +25,16 @@
         href="{{ Vite::asset('node_modules/@fontsource-variable/fraunces/files/fraunces-latin-opsz-normal.woff2') }}">
 
     @vite(['resources/css/landing.css', 'resources/js/landing.js'])
+
+    {{-- Sin JavaScript no hay animaciones de entrada: que el contenido se vea igual --}}
+    <noscript>
+        <style>
+            .reveal, .reveal-word { opacity: 1 !important; transform: none !important; }
+            .typewriter [x-cloak] { display: inline !important; }
+            .typewriter-caret { display: none !important; }
+            .wa-float[x-cloak] { display: inline-flex !important; }
+        </style>
+    </noscript>
 </head>
 
 <body class="font-sans text-brand-900 antialiased">

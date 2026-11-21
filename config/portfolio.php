@@ -18,12 +18,13 @@ return [
 
     'email' => 'alejandrazermeno18@gmail.com',
 
-    // TODO: pon tu número real en formato internacional sin signos: 52XXXXXXXXXX
-    'whatsapp' => env('PORTFOLIO_WHATSAPP', ''),
+    // WhatsApp en formato internacional sin signos (52 + 10 dígitos)
+    'whatsapp' => env('PORTFOLIO_WHATSAPP', '523781220818'),
 
     'linkedin' => 'https://www.linkedin.com/in/jazmin-lomel%C3%AD-zerme%C3%B1o/',
     'github' => 'https://github.com/jazminAlejandraLomeli',
 
-    // Mensaje precargado para WhatsApp / correo
-    'contact_message' => '¡Hola Jazmín! Vi tu portafolio y me gustaría hablar de un proyecto.',
+    // Mensaje precargado para WhatsApp / correo. Menciona el portafolio para
+    // que sepas de dónde llegó el contacto.
+    'contact_message' => '¡Hola Jazmín! 👋 Vi tu portafolio (jazmin-lomeli.com) y me gustaría platicar sobre un proyecto.',
 ];

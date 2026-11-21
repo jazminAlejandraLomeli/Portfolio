@@ -14,4 +14,7 @@
     {{-- Cierre --}}
     <x-landing.contact />
 
+    {{-- WhatsApp siempre a la mano (aparece al pasar el inicio) --}}
+    <x-landing.whatsapp-float />
+
 </x-layouts.landing>

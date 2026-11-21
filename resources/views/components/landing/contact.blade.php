@@ -2,7 +2,7 @@
     $cfg = config('portfolio');
     $msg = rawurlencode($cfg['contact_message']);
 
-    $whatsapp = $cfg['whatsapp'] ? "https://wa.me/{$cfg['whatsapp']}?text={$msg}" : null;
+    $whatsapp = $cfg['whatsapp'] ? "https://api.whatsapp.com/send?phone={$cfg['whatsapp']}&text={$msg}" : null;
     $mail = 'mailto:' . $cfg['email'] . '?subject=' . rawurlencode('Proyecto web') . '&body=' . $msg;
 @endphp
 
@@ -17,7 +17,7 @@
     <div class="mx-auto max-w-3xl text-center">
         <h2 class="reveal font-display text-[clamp(1.9rem,5vw,3rem)] leading-tight font-semibold text-balance"
             style="--i: 0">
-            ¿Tienes algo en mente? <span class="text-gradient-brand">Cuéntamelo.</span>
+            ¿Tienes algo en mente? <span class="emphasis">Cuéntamelo.</span>
         </h2>
 
         <p class="reveal mx-auto mt-5 max-w-xl text-lg text-brand-800/75" style="--i: 1">

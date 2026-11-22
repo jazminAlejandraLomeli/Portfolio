@@ -10,8 +10,8 @@
     x-intersect.once.margin.-15%="$el.classList.add('is-in')">
 
     <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
-        <div class="blob h-[24rem] w-[24rem] -top-20 left-1/4 bg-accent-300"></div>
-        <div class="blob h-[22rem] w-[22rem] -bottom-24 right-1/4 bg-aqua-300" style="animation-delay: -8s"></div>
+        <div class="blob h-[24rem] w-[24rem] -top-20 left-1/4 text-accent-300"></div>
+        <div class="blob h-[22rem] w-[22rem] -bottom-24 right-1/4 text-aqua-300" style="animation-delay: -8s"></div>
     </div>
 
     <div class="mx-auto max-w-3xl text-center">

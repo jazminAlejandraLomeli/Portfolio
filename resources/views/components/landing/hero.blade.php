@@ -27,9 +27,9 @@
 
     {{-- Manchas de color fijas: refuerzan el degradado del fondo de marca --}}
     <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
-        <div class="blob h-[26rem] w-[26rem] -top-24 -left-20 bg-accent-300"></div>
-        <div class="blob h-[30rem] w-[30rem] top-1/3 -right-28 bg-aqua-300"></div>
-        <div class="blob h-[22rem] w-[22rem] -bottom-24 left-1/3 bg-brand-300"></div>
+        <div class="blob h-[26rem] w-[26rem] -top-24 -left-20 text-accent-300"></div>
+        <div class="blob h-[30rem] w-[30rem] top-1/3 -right-28 text-aqua-300"></div>
+        <div class="blob h-[22rem] w-[22rem] -bottom-24 left-1/3 text-brand-300"></div>
     </div>
 
     <div class="mx-auto w-full max-w-5xl">

@@ -249,16 +249,6 @@
        Alpine agregue .is-in. Así el primer pantallazo (y el LCP) no depende
        de que descargue y arranque el JavaScript. Retrasos más cortos para
        que el texto principal aparezca rápido. */
-    @keyframes reveal-in {
-        from {
-            opacity: 0;
-            transform: translate3d(0, 28px, 0) scale(0.98);
-        }
-        to {
-            opacity: 1;
-            transform: none;
-        }
-    }
     @keyframes word-in {
         from {
             opacity: 0;
@@ -278,8 +268,19 @@
         transform: none;
         transition: none;
     }
+    /* El texto del inicio ya es visible desde el primer cuadro y solo se
+       desliza: si entrara desde opacity 0, el párrafo (el elemento más grande
+       en celular, el "LCP") tardaba ~1 s más en contar como pintado. */
+    @keyframes rise-in {
+        from {
+            transform: translate3d(0, 14px, 0);
+        }
+        to {
+            transform: none;
+        }
+    }
     .hero-intro .reveal {
-        animation: reveal-in 0.7s var(--ease-soft) backwards;
+        animation: rise-in 0.7s var(--ease-soft) backwards;
         animation-delay: calc(var(--i, 0) * 40ms);
     }
     .hero-intro .reveal-word {
@@ -301,8 +302,10 @@
     .blob {
         position: absolute;
         border-radius: 9999px;
-        filter: blur(80px);
-        opacity: 0.34;
+        /* Degradado radial en vez de filter: blur(80px): se ve igual de suave
+           y en celular cuesta mucho menos pintarlo. El color sale de text-*. */
+        background: radial-gradient(closest-side, currentColor, transparent);
+        opacity: 0.5;
     }
 }
 

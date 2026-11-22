@@ -17,14 +17,22 @@
     <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="32x32">
     <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
 
-    {{-- Fuentes self-hosted: precargamos la del texto (LCP) y la del titular
-         para que lleguen junto con el CSS y no después. --}}
+    {{-- Solo precargamos la fuente del texto principal (el LCP en celular).
+         Fraunces (67 KB) ya no se precarga: le robaba ancho de banda al
+         primer pantallazo en conexiones lentas. --}}
     <link rel="preload" as="font" type="font/woff2" crossorigin
         href="{{ Vite::asset('node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff2') }}">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-        href="{{ Vite::asset('node_modules/@fontsource-variable/fraunces/files/fraunces-latin-opsz-normal.woff2') }}">
 
-    @vite(['resources/css/landing.css', 'resources/js/landing.js'])
+    {{-- En producción el CSS va dentro del HTML (10 KB comprimido): así no
+         hay una petición extra que bloquee el primer pantallazo. Las rutas
+         de fuentes e imágenes del CSS son absolutas (/build/...), siguen
+         funcionando. En desarrollo se usa Vite normal. --}}
+    @if (Vite::isRunningHot())
+        @vite(['resources/css/landing.css', 'resources/js/landing.js'])
+    @else
+        <style>{!! Vite::content('resources/css/landing.css') !!}</style>
+        @vite(['resources/js/landing.js'])
+    @endif
 
     {{-- Sin JavaScript no hay animaciones de entrada: que el contenido se vea igual --}}
     <noscript>
